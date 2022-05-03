@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_typescriptNativeApp_typescriptNativeAppTests : NSObject
+@end
+@implementation PodsDummy_Pods_typescriptNativeApp_typescriptNativeAppTests
+@end

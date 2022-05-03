@@ -1,0 +1,6 @@
+module Pods_typescriptNativeApp {
+  umbrella header "Pods-typescriptNativeApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
