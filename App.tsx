@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   SafeAreaView,
   ScrollView,
@@ -7,19 +7,19 @@ import {
   Text,
   useColorScheme,
   View,
-} from 'react-native';
+} from "react-native";
 
-import NameTextInput from './NameInput';
-import RadioButton from './RadioButton';
-import {Option} from './models/Option';
+import NameTextInput from "./NameInput";
+import RadioButton from "./RadioButton";
+import { Option } from "./models/Option";
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const Section: React.FC<{
   children: any;
   title: string;
-}> = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
+}> = ({ children, title }) => {
+  const isDarkMode = useColorScheme() === "dark";
   return (
     <View style={styles.sectionContainer}>
       <Text
@@ -28,7 +28,8 @@ const Section: React.FC<{
           {
             color: isDarkMode ? Colors.white : Colors.black,
           },
-        ]}>
+        ]}
+      >
         {title}
       </Text>
       <Text
@@ -37,15 +38,19 @@ const Section: React.FC<{
           {
             color: isDarkMode ? Colors.light : Colors.dark,
           },
-        ]}>
+        ]}
+      >
         {children}
       </Text>
     </View>
   );
 };
+/**
+ * comment to test ssh management
+ */
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+  const isDarkMode = useColorScheme() === "dark";
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -53,33 +58,35 @@ const App = () => {
 
   const optionList: Option[] = [
     {
-      key: 'this',
-      text: 'this',
+      key: "this",
+      text: "this",
     },
     {
-      key: 'is',
-      text: 'is',
+      key: "is",
+      text: "is",
     },
     {
-      key: 'React',
-      text: 'React',
+      key: "React",
+      text: "React",
     },
     {
-      key: 'Native',
-      text: 'Native',
+      key: "Native",
+      text: "Native",
     },
   ];
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <StatusBar barStyle={isDarkMode ? "light-content" : "dark-content"} />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
+        style={backgroundStyle}
+      >
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
+          }}
+        >
           <Section title="Basic Text Input">
             <NameTextInput />
           </Section>
@@ -99,15 +106,15 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: 24,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   sectionDescription: {
     marginTop: 8,
     fontSize: 18,
-    fontWeight: '400',
+    fontWeight: "400",
   },
   highlight: {
-    fontWeight: '700',
+    fontWeight: "700",
   },
 });
 
